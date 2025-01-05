@@ -9,21 +9,6 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "GameBG"
     },
-    "x_H*#bZ}e^gVoriui:6U": {
-        "data": "hwQQABAAAAAAAMisygAAAAAAzPqoCgAAAMDMyo/MAAAAzLyrrMrMAADM/6uqussMAPj/uMqsu8yA+P+6zP+6ysD/j6vM/7/LwMyszMr6b8vMqszMrKpmzPyvysyqu6bMiP+qzPy4ygzA/6zM/8/LAMDMqPz/z8YAAMzM/I9szAAAwMzMrMoAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Asteroid"
-    },
-    "#chk/PWT~#gA9pvzGB`}": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIgIAAAAAABIRIQIAAAAAERERMyIAAAARERERMzMAABEREREREQAAERERMSIzAAASETEiAAAAACAiAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "PlayerLaser"
-    },
-    "Y*|kh^S6U@3z$Ar:`GE[": {
-        "data": "hwQQABAAAAAAAAAAAAAAzAAAAAAAAMDMAAAAAAAAzMwAAAAAAADPzAAAAAAA4M/MAAAAAADs78wAAAAA7izs7szMz+8uLCzu3b0vL0QuLiIAAAAA7k4uIgAAAAAA7i8iAAAAAADgTyQAAAAAAAAuQgAAAAAAAO4iAAAAAAAA4O4AAAAAAAAA7g==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "0"
-    },
     "image2": {
         "data": "hwQIAAgAAAB3AABwAHcAd3Bwdwdwd3AAcHdwAHBwdwcAdwB3dwAAcA==",
         "mimeType": "image/x-mkcd-f4",
@@ -38,6 +23,21 @@
         "data": "hwQIAAgAAAAAAAAAAAAAAAAAAAAAIAIAACACAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "laser"
+    },
+    "Y*|kh^S6U@3z$Ar:`GE[": {
+        "data": "hwQQABAAAAAAAAAAAAAAzAAAAAAAAMDMAAAAAAAAzMwAAAAAAADPzAAAAAAA4M/MAAAAAADs78wAAAAA7izs7szMz+8uLCzu3b0vL0QuLiIAAAAA7k4uIgAAAAAA7i8iAAAAAADgTyQAAAAAAAAuQgAAAAAAAO4iAAAAAAAA4O4AAAAAAAAA7g==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "0"
+    },
+    "#chk/PWT~#gA9pvzGB`}": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIgIAAAAAABIRIQIAAAAAERERMyIAAAARERERMzMAABEREREREQAAERERMSIzAAASETEiAAAAACAiAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "PlayerLaser"
+    },
+    "x_H*#bZ}e^gVoriui:6U": {
+        "data": "hwQQABAAAAAAAMisygAAAAAAzPqoCgAAAMDMyo/MAAAAzLyrrMrMAADM/6uqussMAPj/uMqsu8yA+P+6zP+6ysD/j6vM/7/LwMyszMr6b8vMqszMrKpmzPyvysyqu6bMiP+qzPy4ygzA/6zM/8/LAMDMqPz/z8YAAMzM/I9szAAAwMzMrMoAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Asteroid"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",

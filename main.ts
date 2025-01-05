@@ -10,11 +10,11 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (info.life() != 0 && hasPlayer != false) {
         music.play(music.melodyPlayable(music.pewPew), music.PlaybackMode.UntilDone)
-        dart = sprites.createProjectileFromSprite(assets.image`laser`, playerSquare, 0, -100)
+        dart = sprites.createProjectileFromSprite(assets.image`PlayerLaser`, playerSquare, 0, -100)
     }
 })
 function spawnBogey () {
-    BogeySquare = sprites.create(assets.image`Alien`, SpriteKind.Enemy)
+    BogeySquare = sprites.create(assets.image`Asteroid`, SpriteKind.Enemy)
     BogeySquare.setPosition(randint(0, 160), 0)
     BogeySquare.setFlag(SpriteFlag.DestroyOnWall, true)
 }
@@ -50,7 +50,7 @@ let FPS = 1500
 let EnemyVel = 35
 info.setScore(0)
 pauseUntil(() => hasPlayer != false)
-playerSquare = sprites.create(assets.image`player`, SpriteKind.Player)
+playerSquare = sprites.create(assets.image`0`, SpriteKind.Player)
 playerSquare.setPosition(75, 120)
 playerSquare.setStayInScreen(true)
 controller.moveSprite(playerSquare, 150, 0)
