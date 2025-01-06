@@ -53,7 +53,7 @@ pauseUntil(() => hasPlayer != false)
 playerSquare = sprites.create(assets.image`0`, SpriteKind.Player)
 playerSquare.setPosition(75, 120)
 playerSquare.setStayInScreen(true)
-controller.moveSprite(playerSquare, 150, 0)
+controller.moveSprite(playerSquare, 100, 0)
 game.onUpdateInterval(FPS, function () {
     if (hasPlayer != false) {
         spawnBogey()
