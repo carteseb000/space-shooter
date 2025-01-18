@@ -126,17 +126,6 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 `;
-            case "image2":
-            case "Alien":return img`
-7 . . . . . . 7 
-7 . 7 7 7 7 . 7 
-. 7 . 7 7 . 7 . 
-. 7 7 7 7 7 7 . 
-. . 7 . . 7 . . 
-. . 7 7 7 7 . . 
-. 7 7 . . 7 7 . 
-7 7 . . . . 7 7 
-`;
             case "image1":
             case "player":return img`
 . . . 1 1 . . . 
@@ -158,25 +147,6 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 . . . . . . . . 
 . . . . . . . . 
 . . . . . . . . 
-`;
-            case "Y*|kh^S6U@3z$Ar:`GE[":
-            case "0":return img`
-. . . . . . . c d . . . . . . . 
-. . . . . . . c d . . . . . . . 
-. . . . . . . c d . . . . . . . 
-. . . . . . . c b . . . . . . . 
-. . . . . . . f f . . . . . . . 
-. . . . . . . c 2 . . . . . . . 
-. . . . . . . f f . . . . . . . 
-. . . . . . . e 2 . . . . . . . 
-. . . . . . e e 4 e . . . . . . 
-. . . . . . e 2 4 e . . . . . . 
-. . . . . c c c e e e . . . . . 
-. . . . e e 2 2 2 4 e e . . . . 
-. . c f f f c c e e f f e e . . 
-. c c c c e e 2 2 2 2 4 2 e e . 
-c c c c c c e e 2 2 2 4 2 2 e e 
-c c c c c c e e 2 2 2 2 4 2 e e 
 `;
             case "#chk/PWT~#gA9pvzGB`}":
             case "PlayerLaser":return img`
@@ -338,6 +308,61 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+`;
+            case "Y*|kh^S6U@3z$Ar:`GE[":
+            case "Player":return img`
+. . . . . . . c d . . . . . . . 
+. . . . . . . c d . . . . . . . 
+. . . . . . . c d . . . . . . . 
+. . . . . . . c b . . . . . . . 
+. . . . . . . f f . . . . . . . 
+. . . . . . . c 2 . . . . . . . 
+. . . . . . . f f . . . . . . . 
+. . . . . . . e 2 . . . . . . . 
+. . . . . . e e 4 e . . . . . . 
+. . . . . . e 2 4 e . . . . . . 
+. . . . . c c c e e e . . . . . 
+. . . . e e 2 2 2 4 e e . . . . 
+. . c f f f c c e e f f e e . . 
+. c c c c e e 2 2 2 2 4 2 e e . 
+c c c c c c e e 2 2 2 4 2 2 e e 
+c c c c c c e e 2 2 2 2 4 2 e e 
+`;
+            case "image2":
+            case "Alien":return img`
+7 . . . . . . 7 
+7 . 7 7 7 7 . 7 
+. 7 . 7 7 . 7 . 
+. 7 7 7 7 7 7 . 
+. . 7 . . 7 . . 
+. . 7 7 7 7 . . 
+. 7 7 . . 7 7 . 
+7 7 . . . . 7 7 
+`;
+            case "image4":
+            case "MysteryBox":return img`
+cccccccccccccccc
+cddddbbbbbbddddc
+cddddbbbbbbddddc
+cddbbddddddbbddc
+cddbbddddddbbddc
+cddddddddddddbbc
+cddddddddddddbbc
+cddddddddddddbbc
+cddddddddddddbbc
+cddddddddddddbbc
+cddddddddddddbbc
+cddddddddddbbddc
+cddddddddddbbddc
+cddddddbbbbddddc
+cddddddbbbbddddc
+cddddddbbddddddc
+cddddddbbddddddc
+cddddddddddddddc
+cddddddddddddddc
+cddddddbbddddddc
+cddddddbbddddddc
+cccccccccccccccc
 `;
         }
         return null;
