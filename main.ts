@@ -3,9 +3,8 @@ function MoveBogey () {
 }
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     scene.setBackgroundImage(assets.image`GameBG`)
-    effects.starField.startScreenEffect()
     hasPlayer = true
-    info.setLife(3)
+    info.changeLifeBy(1)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (info.life() != 0 && hasPlayer != false) {
@@ -27,6 +26,7 @@ info.onScore(10000, function () {
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     sprites.destroy(sprite)
     otherSprite.startEffect(effects.disintegrate)
+    music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.UntilDone)
     sprites.destroy(otherSprite)
     info.changeScoreBy(150)
     if (Math.percentChance(0.25)) {
@@ -45,12 +45,14 @@ let BogeySquare: Sprite = null
 let playerSquare: Sprite = null
 let hasPlayer = false
 scene.setBackgroundImage(assets.image`CreditScreen`)
+effects.starField.startScreenEffect()
 hasPlayer = false
 let FPS = 1500
 let EnemyVel = 35
 info.setScore(0)
 pauseUntil(() => hasPlayer != false)
 playerSquare = sprites.create(assets.image`0`, SpriteKind.Player)
+info.changeLifeBy(-1)
 playerSquare.setPosition(75, 120)
 playerSquare.setStayInScreen(true)
 controller.moveSprite(playerSquare, 100, 0)
