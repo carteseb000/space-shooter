@@ -39,15 +39,15 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "player"
     },
-    "image3": {
-        "data": "hwQIAAgAAAAAAAAAAAAAAAAAAAAAcAcAAHAHAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "player-laser"
-    },
     "image5": {
-        "data": "hwQIAAgAAAAAAAAAAAAAAAAAAAAAIAIAACACAAAAAAAAAAAAAAAAAA==",
+        "data": "hwQIAAgAAAAAAAAAAAAAAAAAAAAAIiIAACIiAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "alien-laser"
+    },
+    "image3": {
+        "data": "hwQIAAgAAAAAAAAAAAAAAAAAAAAAd3cAAHd3AAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "player-laser"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",

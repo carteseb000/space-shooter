@@ -16,8 +16,8 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.MysteryBox, function (sprite
     otherSprite.startEffect(effects.disintegrate)
     music.play(music.melodyPlayable(music.powerDown), music.PlaybackMode.UntilDone)
     sprites.destroy(otherSprite)
-    if (Math.percentChance(100)) {
-    	
+    if (Math.percentChance(50)) {
+        GenCount += 1
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -37,13 +37,11 @@ function spawnBogey (genSpeed: number) {
 function SpawnGreenAlien (num: number) {
     for (let index = 0; index < num; index++) {
         AlienSquare = sprites.create(assets.image`Alien`, SpriteKind.Enemy)
-        AlienSquare.setPosition(0, 16)
+        AlienSquare.setPosition(0, randint(8, 50))
         AlienSquare.setVelocity(EnemyVel, 0)
-        AlienSquare.setFlag(SpriteFlag.DestroyOnWall, true)
-        if (Math.percentChance(randint(0, 100))) {
-            alienLaser = sprites.create(assets.image`alien-laser`, SpriteKind.AlienProjectile)
-        }
+        AlienSquare.setFlag(SpriteFlag.AutoDestroy, true)
     }
+    FireAlienLasers()
 }
 info.onScore(10000, function () {
     music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
@@ -69,14 +67,28 @@ function SpawnMysterySupplyDrop (otherSprite: Sprite) {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.MysteryBox, function (sprite, otherSprite) {
     sprites.destroy(otherSprite)
     music.play(music.melodyPlayable(music.powerUp), music.PlaybackMode.UntilDone)
+    if (Math.percentChance(100)) {
+        GenCount = 1
+    }
     if (Math.percentChance(25)) {
         info.changeScoreBy(1000)
     } else if (Math.percentChance(75)) {
         info.changeLifeBy(1)
         info.changeScoreBy(10)
-    } else if (Math.percentChance(randint(0, 100))) {
-    	
     }
+})
+function FireAlienLasers () {
+    alienLaser = sprites.create(assets.image`alien-laser`, SpriteKind.AlienProjectile)
+    alienLaser.setPosition(AlienSquare.x, AlienSquare.y - 9)
+    alienLaser.setVelocity(0, 100)
+    alienLaser.setFlag(SpriteFlag.AutoDestroy, true)
+}
+sprites.onOverlap(SpriteKind.Player, SpriteKind.AlienProjectile, function (sprite, otherSprite) {
+    sprites.destroy(otherSprite)
+    music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.UntilDone)
+    scene.cameraShake(4, 500)
+    sprite.startEffect(effects.fire, 200)
+    info.changeLifeBy(-1)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     sprites.destroy(sprite)
@@ -89,19 +101,20 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
         info.changeScoreBy(75)
     }
 })
-let MysteryBoxSprite: Sprite = null
 let alienLaser: Sprite = null
+let MysteryBoxSprite: Sprite = null
 let AlienSquare: Sprite = null
 let dart: Sprite = null
 let BogeySquare: Sprite = null
 let playerSquare: Sprite = null
 let EnemyVel = 0
+let GenCount = 0
 let hasPlayer = false
 scene.setBackgroundImage(assets.image`CreditScreen`)
 effects.starField.startScreenEffect()
 hasPlayer = false
 let FPS = 1500
-let GenCount = 1
+GenCount = 1
 EnemyVel = 35
 info.setScore(0)
 pauseUntil(() => !(hasPlayer == false))
@@ -115,7 +128,7 @@ game.onUpdateInterval(FPS, function () {
         if (Math.percentChance(50)) {
             SpawnGreenAlien(GenCount)
         } else {
-            spawnBogey(GenCount)
+            spawnBogey(1)
         }
     }
 })

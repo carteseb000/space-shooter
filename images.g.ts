@@ -353,25 +353,25 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 1 1 1 1 1 1 1 1 
 . . 1 . . 1 . . 
 `;
-            case "image3":
-            case "player-laser":return img`
-. . . . . . . . 
-. . . . . . . . 
-. . . . . . . . 
-. . . 7 7 . . . 
-. . . 7 7 . . . 
-. . . . . . . . 
-. . . . . . . . 
-. . . . . . . . 
-`;
             case "image5":
             case "alien-laser":return img`
 . . . . . . . . 
 . . . . . . . . 
-. . . . . . . . 
+. . . 2 2 . . . 
+. . . 2 2 . . . 
 . . . 2 2 . . . 
 . . . 2 2 . . . 
 . . . . . . . . 
+. . . . . . . . 
+`;
+            case "image3":
+            case "player-laser":return img`
+. . . . . . . . 
+. . . . . . . . 
+. . . 7 7 . . . 
+. . . 7 7 . . . 
+. . . 7 7 . . . 
+. . . 7 7 . . . 
 . . . . . . . . 
 . . . . . . . . 
 `;
