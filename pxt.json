@@ -5,7 +5,9 @@
     "dependencies": {
         "device": "*",
         "controller": "*",
-        "story": "github:riknoll/arcade-story#v1.3.1"
+        "story": "github:riknoll/arcade-story#v1.3.1",
+        "Timers": "github:microsoft/arcade-timers#v1.1.0",
+        "arcade-text": "github:microsoft/arcade-text#v1.3.0"
     },
     "files": [
         "main.blocks",

@@ -2,6 +2,30 @@ namespace SpriteKind {
     export const Asteroid = SpriteKind.create()
 }
 let numCols = 0
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    sprites.destroy(otherSprite)
+    music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.UntilDone)
+    scene.cameraShake(4, 500)
+    sprite.startEffect(effects.fire, 200)
+    info.changeLifeBy(-1)
+})
+function InitPlayer () {
+    playerSquare = sprites.create(assets.image`Player`, SpriteKind.Player)
+    info.setScore(0)
+    info.changeLifeBy(-2)
+    playerSquare.setPosition(75, 116)
+    playerSquare.setStayInScreen(true)
+    controller.moveSprite(playerSquare, 100, 0)
+}
+function InitVariables () {
+    hasPlayer = false
+    FPS = 1000
+    AlienGenCount = 1
+    Level = 0
+    AlienCount = 0
+    EnemyVel = 35
+    maxShots = 3
+}
 function spawnAsteriod (numToGen: number) {
     for (let index = 0; index < numToGen; index++) {
         if (Math.percentChance(15)) {
@@ -10,28 +34,20 @@ function spawnAsteriod (numToGen: number) {
             BogeySquare = sprites.create(assets.image`Asteroid`, SpriteKind.Asteroid)
         }
         BogeySquare.setPosition(randint(16, 155), 0)
+        BogeySquare.setVelocity(0, EnemyVel)
         BogeySquare.setFlag(SpriteFlag.AutoDestroy, true)
     }
-    moveAsteriod()
 }
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+function startGame () {
+    sprites.destroy(textSprite, effects.disintegrate, 500)
+    sprites.destroy(textSprite2, effects.disintegrate, 500)
+    sprites.destroy(textSprite3, effects.disintegrate, 500)
+    music.play(music.melodyPlayable(music.beamUp), music.PlaybackMode.InBackground)
     scene.setBackgroundImage(assets.image`GameBG`)
     hasPlayer = true
     info.changeLifeBy(1)
-})
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (info.life() != 0 && hasPlayer != false && sprites.allOfKind(SpriteKind.Projectile).length < maxShots) {
-        music.play(music.melodyPlayable(music.pewPew), music.PlaybackMode.UntilDone)
-        dart = sprites.createProjectileFromSprite(assets.image`player-laser`, playerSquare, 0, -100)
-    }
-})
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Asteroid, function (sprite, otherSprite) {
-    sprites.destroy(sprite)
-    otherSprite.startEffect(effects.disintegrate)
-    music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.UntilDone)
-    sprites.destroy(otherSprite)
-    info.changeScoreBy(randint(0, 10))
-})
+    InitPlayer()
+}
 function moveAsteriod () {
     for (let value of sprites.allOfKind(SpriteKind.Asteroid)) {
         value.y += 4
@@ -49,20 +65,14 @@ function SpawnGreenAlien () {
     moveAliens()
     calcNextAlienMove()
 }
-info.onScore(10000, function () {
-    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
-    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
-    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
-    info.changeLifeBy(1)
-})
 function moveAliens () {
     sprite_list = sprites.allOfKind(SpriteKind.Enemy)
     aliensMoveDown = 0
-    for (let index = 0; index <= numCols; index++) {
-        if (index < sprite_list.length) {
-            if (aliensMoveLeft == 1 && sprite_list[index].x <= AsteroidShiftAmt) {
+    for (let index2 = 0; index2 <= numCols; index2++) {
+        if (index2 < sprite_list.length) {
+            if (aliensMoveLeft == 1 && sprite_list[index2].x <= AsteroidShiftAmt) {
                 aliensMoveDown = 1
-            } else if (aliensMoveLeft == 0 && sprite_list[index].x >= scene.screenWidth() - AsteroidShiftAmt) {
+            } else if (aliensMoveLeft == 0 && sprite_list[index2].x >= scene.screenWidth() - AsteroidShiftAmt) {
                 aliensMoveDown = 1
             }
         }
@@ -79,22 +89,15 @@ function moveAliens () {
         moveAlienHoriz()
     }
 }
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Asteroid, function (sprite, otherSprite) {
-    sprites.destroy(otherSprite)
-    music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.UntilDone)
-    scene.cameraShake(4, 500)
-    sprite.startEffect(effects.fire, 200)
-    info.changeLifeBy(-1)
-})
 function moveAlienHoriz () {
-    for (let value of sprites.allOfKind(SpriteKind.Enemy)) {
-        value.x += alienDelta
+    for (let value2 of sprites.allOfKind(SpriteKind.Enemy)) {
+        value2.x += alienDelta
     }
 }
 function moveAlienDown () {
-    for (let value of sprites.allOfKind(SpriteKind.Enemy)) {
-        value.y += 4
-        if (value.y > scene.screenHeight() - value.height / 2) {
+    for (let value3 of sprites.allOfKind(SpriteKind.Enemy)) {
+        value3.y += 4
+        if (value3.y > scene.screenHeight() - value3.height / 2) {
             game.gameOver(false)
         }
     }
@@ -110,6 +113,19 @@ function SpawnMysterySupplyDrop (otherSprite: Sprite) {
     MysteryBoxSprite.setVelocity(0, 25)
     MysteryBoxSprite.setFlag(SpriteFlag.AutoDestroy, true)
 }
+info.onScore(10000, function () {
+    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
+    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
+    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
+    info.changeLifeBy(1)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Asteroid, function (sprite, otherSprite) {
+    sprites.destroy(otherSprite)
+    music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.InBackground)
+    scene.cameraShake(4, 500)
+    sprite.startEffect(effects.fire, 200)
+    info.changeLifeBy(-1)
+})
 function FireAlienLasers (amount: number) {
     for (let index = 0; index < amount; index++) {
         if (Math.percentChance(50)) {
@@ -120,16 +136,38 @@ function FireAlienLasers (amount: number) {
         }
     }
 }
+function InitCreditScreen () {
+    textSprite = textsprite.create("Space Shooter", 15, 5)
+    textSprite.setPosition(scene.screenWidth() / 2, 16)
+    textSprite2 = textsprite.create("Press Any button to Start", 15, 5)
+    textSprite2.setPosition(scene.screenWidth() / 2, scene.screenHeight() / 2)
+    textSprite3 = textsprite.create("the game.", 15, 5)
+    textSprite3.setPosition(scene.screenWidth() / 2, scene.screenHeight() / 2 + 8)
+    effects.starField.startScreenEffect()
+}
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Asteroid, function (sprite, otherSprite) {
+    sprites.destroy(sprite)
+    otherSprite.startEffect(effects.disintegrate)
+    music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.InBackground)
+    sprites.destroy(otherSprite)
+    info.changeScoreBy(randint(0, 10))
+})
 function nuke () {
     sprites.destroyAllSpritesOfKind(SpriteKind.Player)
     sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
     sprites.destroyAllSpritesOfKind(SpriteKind.Player)
     Level += 1
 }
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (info.life() != 0 && hasPlayer != false && sprites.allOfKind(SpriteKind.Projectile).length < maxShots) {
+        music.play(music.melodyPlayable(music.pewPew), music.PlaybackMode.InBackground)
+        dart = sprites.createProjectileFromSprite(assets.image`player-laser`, playerSquare, 0, -100)
+    }
+})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     sprites.destroy(sprite)
     otherSprite.startEffect(effects.disintegrate)
-    music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.UntilDone)
+    music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.InBackground)
     sprites.destroy(otherSprite)
     AlienCount += -1
     info.changeScoreBy(randint(0, 100))
@@ -158,13 +196,7 @@ function checklevel () {
         }
     }
 }
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
-    sprites.destroy(otherSprite)
-    music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.UntilDone)
-    scene.cameraShake(4, 500)
-    sprite.startEffect(effects.fire, 200)
-    info.changeLifeBy(-1)
-})
+let dart: Sprite = null
 let alienLaser: Sprite = null
 let MysteryBoxSprite: Sprite = null
 let nextAlienMove = 0
@@ -174,29 +206,22 @@ let sprite_list: Sprite[] = []
 let AlienSquare: Sprite = null
 let aliensMoveLeft = 0
 let AsteroidShiftAmt = 0
-let dart: Sprite = null
+let textSprite3: TextSprite = null
+let textSprite2: TextSprite = null
+let textSprite: TextSprite = null
 let BogeySquare: Sprite = null
 let maxShots = 0
-let playerSquare: Sprite = null
+let EnemyVel = 0
 let AlienCount = 0
 let Level = 0
+let AlienGenCount = 0
+let FPS = 0
 let hasPlayer = false
-scene.setBackgroundImage(assets.image`CreditScreen`)
-effects.starField.startScreenEffect()
-hasPlayer = false
-let FPS = 1500
-let AlienGenCount = 1
-Level = 0
-AlienCount = 0
-let EnemyVel = 35
-info.setScore(0)
-pauseUntil(() => hasPlayer != false)
-playerSquare = sprites.create(assets.image`Player`, SpriteKind.Player)
-maxShots = 3
-info.changeLifeBy(-2)
-playerSquare.setPosition(75, 116)
-playerSquare.setStayInScreen(true)
-controller.moveSprite(playerSquare, 100, 0)
+let playerSquare: Sprite = null
+InitCreditScreen()
+InitVariables()
+pauseUntil(() => controller.anyButton.isPressed())
+startGame()
 game.onUpdateInterval(FPS, function () {
     spawnAsteriod(1)
 })
