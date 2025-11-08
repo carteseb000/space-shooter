@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v2.0.61/---simulator","cdnUrl":"https://cdn.makecode.com","version":"4.1.0","target":"arcade","targetVersion":"2.0.61","repo":"carteseb000/space-shooter"}
-// total=2551682 new=23.64% cached=71.99% other=4.37%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v2.0.61/---simulator","cdnUrl":"https://cdn.makecode.com","version":"4.2.0","target":"arcade","targetVersion":"2.0.61","repo":"carteseb000/space-shooter"}
+// total=2551683 new=23.64% cached=71.99% other=4.37%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -605,7 +605,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P54629(s) {
+function _main___P57300(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1134,82 +1134,82 @@ switch (step) {
     s.callLocIdx = 89; s.pc = 51; return s.tmp_0;
   case 51:
     r0 = s.retval;
-    globals.Asteroid___32601 = (r0);
+    globals.Asteroid___56088 = (r0);
     s.tmp_0 = sprites_onOverlap__P30122_mk(s);
     s.tmp_0.arg0 = globals.Player___30144;
     s.tmp_0.arg1 = globals.Enemy___30147;
-    s.tmp_0.arg2 = inline__P35351;
+    s.tmp_0.arg2 = inline__P56095;
     s.callLocIdx = 96; s.pc = 52; return s.tmp_0;
   case 52:
     r0 = s.retval;
     s.tmp_0 = info_onScore__P30243_mk(s);
     s.tmp_0.arg0 = 5000;
-    s.tmp_0.arg1 = inline__P35559;
+    s.tmp_0.arg1 = inline__P56330;
     s.callLocIdx = 128; s.pc = 53; return s.tmp_0;
   case 53:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P30122_mk(s);
     s.tmp_0.arg0 = globals.Player___30144;
-    s.tmp_0.arg1 = globals.Asteroid___32601;
-    s.tmp_0.arg2 = inline__P35623;
+    s.tmp_0.arg1 = globals.Asteroid___56088;
+    s.tmp_0.arg2 = inline__P56397;
     s.callLocIdx = 135; s.pc = 54; return s.tmp_0;
   case 54:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P30122_mk(s);
     s.tmp_0.arg0 = 1;
-    s.tmp_0.arg1 = globals.Asteroid___32601;
-    s.tmp_0.arg2 = inline__P35708;
+    s.tmp_0.arg1 = globals.Asteroid___56088;
+    s.tmp_0.arg2 = inline__P56485;
     s.callLocIdx = 157; s.pc = 55; return s.tmp_0;
   case 55:
     r0 = s.retval;
     s.tmp_0 = controller_Button_onEvent__P29858_mk(s);
     s.tmp_0.arg0 = globals.A___29775;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P35748;
+    s.tmp_0.arg2 = inline__P56525;
     s.callLocIdx = 164; s.pc = 56; return s.tmp_0;
   case 56:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P30122_mk(s);
     s.tmp_0.arg0 = 1;
     s.tmp_0.arg1 = globals.Enemy___30147;
-    s.tmp_0.arg2 = inline__P35776;
+    s.tmp_0.arg2 = inline__P56554;
     s.callLocIdx = 171; s.pc = 57; return s.tmp_0;
   case 57:
     r0 = s.retval;
-    globals.dart___32618 = (null);
-    globals.textSprite3___32628 = (null);
-    globals.textSprite2___32629 = (null);
-    globals.textSprite___32630 = (null);
-    globals.BogeySquare___32631 = (null);
-    globals.maxShots___32632 = (0);
-    globals.EnemyVel___32633 = (0);
-    globals.AlienCount___32634 = (0);
-    globals.Level___32635 = (0);
-    globals.AlienGenCount___32636 = (0);
-    globals.FPS___32637 = (0);
-    globals.hasPlayer___32638 = (false);
-    globals.playerSquare___32639 = (null);
-    s.tmp_0 = InitCreditScreen__P32615_mk(s);
+    globals.dart___56543 = (null);
+    globals.textSprite3___56198 = (null);
+    globals.textSprite2___56193 = (null);
+    globals.textSprite___56188 = (null);
+    globals.BogeySquare___56162 = (null);
+    globals.maxShots___56151 = (0);
+    globals.EnemyVel___56148 = (0);
+    globals.AlienCount___56145 = (0);
+    globals.Level___56142 = (0);
+    globals.AlienGenCount___56139 = (0);
+    globals.FPS___56136 = (0);
+    globals.hasPlayer___56133 = (false);
+    globals.playerSquare___56115 = (null);
+    s.tmp_0 = InitCreditScreen__P56443_mk(s);
     s.callLocIdx = 172; s.pc = 58; return s.tmp_0;
   case 58:
     r0 = s.retval;
-    s.tmp_0 = InitVariables__P32604_mk(s);
+    s.tmp_0 = InitVariables__P56131_mk(s);
     s.callLocIdx = 173; s.pc = 59; return s.tmp_0;
   case 59:
     r0 = s.retval;
     s.tmp_0 = pauseUntil__P28015_mk(s);
-    s.tmp_0.arg0 = inline__P35839;
+    s.tmp_0.arg0 = inline__P56618;
     s.tmp_0.arg1 = undefined;
     s.callLocIdx = 174; s.pc = 60; return s.tmp_0;
   case 60:
     r0 = s.retval;
-    s.tmp_0 = startGame__P32606_mk(s);
+    s.tmp_0 = startGame__P56185_mk(s);
     s.callLocIdx = 175; s.pc = 61; return s.tmp_0;
   case 61:
     r0 = s.retval;
     s.tmp_0 = game_onUpdateInterval__P30706_mk(s);
-    s.tmp_0.arg0 = globals.FPS___32637;
-    s.tmp_0.arg1 = inline__P35845;
+    s.tmp_0.arg0 = globals.FPS___56136;
+    s.tmp_0.arg1 = inline__P56624;
     s.callLocIdx = 177; s.pc = 62; return s.tmp_0;
   case 62:
     r0 = s.retval;
@@ -1217,13 +1217,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P54629.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/Timers/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P54629.continuations = [  ]
+_main___P57300.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/Timers/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P57300.continuations = [  ]
 
-function _main___P54629_mk(s) {
+function _main___P57300_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P54629, depth: s.depth + 1,
+        parent: s, fn: _main___P57300, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2065,7 +2065,7 @@ const _hex35343 = pxsim.BufferMethods.createBufferFromHex("0078000408020306001c0
 
 
 
-function inline__P35351(s) {
+function inline__P56095(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2120,12 +2120,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P35351.info = {"start":144,"length":248,"line":4,"column":55,"endLine":10,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P56095.info = {"start":144,"length":248,"line":4,"column":55,"endLine":10,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P35351_mk(s) {
+function inline__P56095_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P35351, depth: s.depth + 1,
+        parent: s, fn: inline__P56095, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2137,7 +2137,7 @@ function inline__P35351_mk(s) {
 
 
 
-function inline__P35559(s) {
+function inline__P56330(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2189,12 +2189,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P35559.info = {"start":3159,"length":283,"line":96,"column":19,"endLine":101,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P56330.info = {"start":3159,"length":283,"line":96,"column":19,"endLine":101,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P35559_mk(s) {
+function inline__P56330_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P35559, depth: s.depth + 1,
+        parent: s, fn: inline__P56330, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2204,7 +2204,7 @@ function inline__P35559_mk(s) {
 
 
 
-function inline__P35623(s) {
+function inline__P56397(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2259,12 +2259,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P35623.info = {"start":4163,"length":251,"line":121,"column":58,"endLine":127,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P56397.info = {"start":4163,"length":251,"line":121,"column":58,"endLine":127,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P35623_mk(s) {
+function inline__P56397_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P35623, depth: s.depth + 1,
+        parent: s, fn: inline__P56397, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2276,7 +2276,7 @@ function inline__P35623_mk(s) {
 
 
 
-function inline__P35708(s) {
+function inline__P56485(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2332,12 +2332,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P35708.info = {"start":5463,"length":258,"line":148,"column":62,"endLine":154,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P56485.info = {"start":5464,"length":258,"line":148,"column":62,"endLine":154,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P35708_mk(s) {
+function inline__P56485_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P35708, depth: s.depth + 1,
+        parent: s, fn: inline__P56485, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2349,7 +2349,7 @@ function inline__P35708_mk(s) {
 
 
 
-function inline__P35748(s) {
+function inline__P56525(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2371,7 +2371,7 @@ switch (step) {
     r0 = s.tmp_0;
     { step = 2; continue; }
   case 1:
-    r0 = (globals.hasPlayer___32638 != false);
+    r0 = (globals.hasPlayer___56133 != false);
   case 2:
     // jmp value (already in r0)
     s.tmp_3 = r0;
@@ -2388,7 +2388,7 @@ switch (step) {
     s.tmp_5 = r0;
     r0 = pxsim_Array__length(s.tmp_5);
     s.tmp_4 = r0;
-    r0 = (s.tmp_4 < globals.maxShots___32632);
+    r0 = (s.tmp_4 < globals.maxShots___56151);
   case 4:
     // jmp value (already in r0)
     s.tmp_7 = r0;
@@ -2412,25 +2412,25 @@ switch (step) {
   case 12:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.playerSquare___32639;
+    s.tmp_0.arg1 = globals.playerSquare___56115;
     s.tmp_0.arg2 = 0;
     s.tmp_0.arg3 = -100;
     s.callLocIdx = 163; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
-    globals.dart___32618 = (r0);
+    globals.dart___56543 = (r0);
   case 5:
   case 6:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P35748.info = {"start":5975,"length":322,"line":161,"column":52,"endLine":166,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P56525.info = {"start":5976,"length":322,"line":161,"column":52,"endLine":166,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P35748_mk(s) {
+function inline__P56525_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P35748, depth: s.depth + 1,
+        parent: s, fn: inline__P56525, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2448,7 +2448,7 @@ function inline__P35748_mk(s) {
 
 
 
-function inline__P35776(s) {
+function inline__P56554(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2495,8 +2495,8 @@ switch (step) {
     s.callLocIdx = 169; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    r0 = (globals.AlienCount___32634 + -1);
-    globals.AlienCount___32634 = (r0);
+    r0 = (globals.AlienCount___56145 + -1);
+    globals.AlienCount___56145 = (r0);
     s.tmp_0 = info_changeScoreBy__P30237_mk(s);
     r0 = pxsim.Math_.randomRange(0, 100);
     s.tmp_0.arg0 = r0;
@@ -2507,12 +2507,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P35776.info = {"start":6358,"length":292,"line":167,"column":59,"endLine":174,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P56554.info = {"start":6359,"length":292,"line":167,"column":59,"endLine":174,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P35776_mk(s) {
+function inline__P56554_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P35776, depth: s.depth + 1,
+        parent: s, fn: inline__P56554, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2524,7 +2524,7 @@ function inline__P35776_mk(s) {
 
 
 
-function inline__P35839(s) {
+function inline__P56618(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2544,12 +2544,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P35839.info = {"start":7880,"length":38,"line":223,"column":11,"endLine":223,"endColumn":49,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P56618.info = {"start":7881,"length":38,"line":223,"column":11,"endLine":223,"endColumn":49,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P35839_mk(s) {
+function inline__P56618_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P35839, depth: s.depth + 1,
+        parent: s, fn: inline__P56618, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -2558,7 +2558,7 @@ function inline__P35839_mk(s) {
 
 
 
-function inline__P35845(s) {
+function inline__P56624(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2568,7 +2568,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = spawnAsteriod__P32605_mk(s);
+    s.tmp_0 = spawnAsteriod__P56153_mk(s);
     s.tmp_0.arg0 = 1;
     s.callLocIdx = 176; s.pc = 1; return s.tmp_0;
   case 1:
@@ -2577,12 +2577,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P35845.info = {"start":7959,"length":36,"line":225,"column":27,"endLine":227,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P56624.info = {"start":7960,"length":36,"line":225,"column":27,"endLine":227,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P35845_mk(s) {
+function inline__P56624_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P35845, depth: s.depth + 1,
+        parent: s, fn: inline__P56624, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -2591,7 +2591,7 @@ function inline__P35845_mk(s) {
 
 
 
-function spawnAsteriod__P32605(s) {
+function spawnAsteriod__P56153(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2601,14 +2601,14 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.index___35400 = undefined;
+    s.index___56155 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.index___35400 = (0);
+    s.index___56155 = (0);
   case 1:
-    r0 = (s.index___35400 < s.arg0);
+    r0 = (s.index___56155 < s.arg0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
@@ -2627,11 +2627,11 @@ switch (step) {
   case 7:
     r0 = s.retval;
     s.tmp_3.arg0 = r0;
-    s.tmp_3.arg1 = globals.Asteroid___32601;
+    s.tmp_3.arg1 = globals.Asteroid___56088;
     s.callLocIdx = 106; s.pc = 6; return s.tmp_3;
   case 6:
     r0 = s.retval;
-    globals.BogeySquare___32631 = (r0);
+    globals.BogeySquare___56162 = (r0);
     { step = 3; continue; }
   case 2:
     s.tmp_0 = sprites_create__P29937_mk(s);
@@ -2641,14 +2641,14 @@ switch (step) {
   case 9:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.Asteroid___32601;
+    s.tmp_0.arg1 = globals.Asteroid___56088;
     s.callLocIdx = 108; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    globals.BogeySquare___32631 = (r0);
+    globals.BogeySquare___56162 = (r0);
   case 3:
     s.tmp_0 = Sprite_setPosition__P30072_mk(s);
-    s.tmp_0.arg0 = globals.BogeySquare___32631;
+    s.tmp_0.arg0 = globals.BogeySquare___56162;
     r0 = pxsim.Math_.randomRange(16, 155);
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 0;
@@ -2656,40 +2656,40 @@ switch (step) {
   case 10:
     r0 = s.retval;
     s.tmp_0 = Sprite_setVelocity__P30073_mk(s);
-    s.tmp_0.arg0 = globals.BogeySquare___32631;
+    s.tmp_0.arg0 = globals.BogeySquare___56162;
     s.tmp_0.arg1 = 0;
-    s.tmp_0.arg2 = globals.EnemyVel___32633;
+    s.tmp_0.arg2 = globals.EnemyVel___56148;
     s.callLocIdx = 110; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
     s.tmp_0 = Sprite_setFlag__P30082_mk(s);
-    s.tmp_0.arg0 = globals.BogeySquare___32631;
+    s.tmp_0.arg0 = globals.BogeySquare___56162;
     s.tmp_0.arg1 = 4;
     s.tmp_0.arg2 = true;
     s.callLocIdx = 111; s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
-    r0 = (s.index___35400 + 1);
-    s.index___35400 = (r0);
+    r0 = (s.index___56155 + 1);
+    s.index___56155 = (r0);
     { step = 1; continue; }
   case 4:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-spawnAsteriod__P32605.info = {"start":825,"length":498,"line":28,"column":0,"endLine":39,"endColumn":1,"fileName":"main.ts","functionName":"spawnAsteriod","argumentNames":["numToGen"]}
+spawnAsteriod__P56153.info = {"start":825,"length":498,"line":28,"column":0,"endLine":39,"endColumn":1,"fileName":"main.ts","functionName":"spawnAsteriod","argumentNames":["numToGen"]}
 
-function spawnAsteriod__P32605_mk(s) {
+function spawnAsteriod__P56153_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: spawnAsteriod__P32605, depth: s.depth + 1,
+        parent: s, fn: spawnAsteriod__P56153, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  index___35400: undefined,
+  index___56155: undefined,
   arg0: undefined,
 } }
 
@@ -6809,7 +6809,7 @@ function control_EventContext_runCallbacks__P32727_mk(s) {
 
 
 
-function startGame__P32606(s) {
+function startGame__P56185(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6820,21 +6820,21 @@ switch (step) {
   case 0:
 
     s.tmp_0 = sprites_destroy__P29939_mk(s);
-    s.tmp_0.arg0 = globals.textSprite___32630;
+    s.tmp_0.arg0 = globals.textSprite___56188;
     s.tmp_0.arg1 = globals.disintegrate___30963;
     s.tmp_0.arg2 = 500;
     s.callLocIdx = 112; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = sprites_destroy__P29939_mk(s);
-    s.tmp_0.arg0 = globals.textSprite2___32629;
+    s.tmp_0.arg0 = globals.textSprite2___56193;
     s.tmp_0.arg1 = globals.disintegrate___30963;
     s.tmp_0.arg2 = 500;
     s.callLocIdx = 113; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     s.tmp_0 = sprites_destroy__P29939_mk(s);
-    s.tmp_0.arg0 = globals.textSprite3___32628;
+    s.tmp_0.arg0 = globals.textSprite3___56198;
     s.tmp_0.arg1 = globals.disintegrate___30963;
     s.tmp_0.arg2 = 500;
     s.callLocIdx = 114; s.pc = 3; return s.tmp_0;
@@ -6861,13 +6861,13 @@ switch (step) {
     s.callLocIdx = 118; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
-    globals.hasPlayer___32638 = (true);
+    globals.hasPlayer___56133 = (true);
     s.tmp_0 = info_changeLifeBy__P30241_mk(s);
     s.tmp_0.arg0 = 1;
     s.callLocIdx = 119; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    s.tmp_0 = InitPlayer__P32603_mk(s);
+    s.tmp_0 = InitPlayer__P56113_mk(s);
     s.callLocIdx = 120; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
@@ -6875,12 +6875,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-startGame__P32606.info = {"start":1324,"length":402,"line":40,"column":0,"endLine":49,"endColumn":1,"fileName":"main.ts","functionName":"startGame","argumentNames":[]}
+startGame__P56185.info = {"start":1324,"length":402,"line":40,"column":0,"endLine":49,"endColumn":1,"fileName":"main.ts","functionName":"startGame","argumentNames":[]}
 
-function startGame__P32606_mk(s) {
+function startGame__P56185_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: startGame__P32606, depth: s.depth + 1,
+        parent: s, fn: startGame__P56185, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -6890,7 +6890,7 @@ function startGame__P32606_mk(s) {
 
 
 
-function InitPlayer__P32603(s) {
+function InitPlayer__P56113(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6911,7 +6911,7 @@ switch (step) {
     s.callLocIdx = 98; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.playerSquare___32639 = (r0);
+    globals.playerSquare___56115 = (r0);
     s.tmp_0 = info_setScore__P30236_mk(s);
     s.tmp_0.arg0 = 0;
     s.callLocIdx = 99; s.pc = 3; return s.tmp_0;
@@ -6923,20 +6923,20 @@ switch (step) {
   case 4:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P30072_mk(s);
-    s.tmp_0.arg0 = globals.playerSquare___32639;
+    s.tmp_0.arg0 = globals.playerSquare___56115;
     s.tmp_0.arg1 = 75;
     s.tmp_0.arg2 = 116;
     s.callLocIdx = 101; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
     s.tmp_0 = Sprite_setStayInScreen__P30080_mk(s);
-    s.tmp_0.arg0 = globals.playerSquare___32639;
+    s.tmp_0.arg0 = globals.playerSquare___56115;
     s.tmp_0.arg1 = true;
     s.callLocIdx = 102; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     s.tmp_0 = controller_moveSprite__P29829_mk(s);
-    s.tmp_0.arg0 = globals.playerSquare___32639;
+    s.tmp_0.arg0 = globals.playerSquare___56115;
     s.tmp_0.arg1 = 100;
     s.tmp_0.arg2 = 0;
     s.callLocIdx = 103; s.pc = 7; return s.tmp_0;
@@ -6946,12 +6946,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-InitPlayer__P32603.info = {"start":394,"length":273,"line":11,"column":0,"endLine":18,"endColumn":1,"fileName":"main.ts","functionName":"InitPlayer","argumentNames":[]}
+InitPlayer__P56113.info = {"start":394,"length":273,"line":11,"column":0,"endLine":18,"endColumn":1,"fileName":"main.ts","functionName":"InitPlayer","argumentNames":[]}
 
-function InitPlayer__P32603_mk(s) {
+function InitPlayer__P56113_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: InitPlayer__P32603, depth: s.depth + 1,
+        parent: s, fn: InitPlayer__P56113, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -27928,7 +27928,7 @@ function control_PollEvent_constructor__P32702_mk(s) {
 
 
 
-function InitVariables__P32604(s) {
+function InitVariables__P56131(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -27938,23 +27938,23 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    globals.hasPlayer___32638 = (false);
-    globals.FPS___32637 = (1000);
-    globals.AlienGenCount___32636 = (1);
-    globals.Level___32635 = (0);
-    globals.AlienCount___32634 = (0);
-    globals.EnemyVel___32633 = (35);
-    globals.maxShots___32632 = (3);
+    globals.hasPlayer___56133 = (false);
+    globals.FPS___56136 = (1000);
+    globals.AlienGenCount___56139 = (1);
+    globals.Level___56142 = (0);
+    globals.AlienCount___56145 = (0);
+    globals.EnemyVel___56148 = (35);
+    globals.maxShots___56151 = (3);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-InitVariables__P32604.info = {"start":668,"length":156,"line":19,"column":0,"endLine":27,"endColumn":1,"fileName":"main.ts","functionName":"InitVariables","argumentNames":[]}
+InitVariables__P56131.info = {"start":668,"length":156,"line":19,"column":0,"endLine":27,"endColumn":1,"fileName":"main.ts","functionName":"InitVariables","argumentNames":[]}
 
-function InitVariables__P32604_mk(s) {
+function InitVariables__P56131_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: InitVariables__P32604, depth: s.depth + 1,
+        parent: s, fn: InitVariables__P56131, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
 } }
 
@@ -27962,7 +27962,7 @@ function InitVariables__P32604_mk(s) {
 
 
 
-function InitCreditScreen__P32615(s) {
+function InitCreditScreen__P56443(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -27973,15 +27973,15 @@ switch (step) {
   case 0:
 
     s.tmp_0 = textsprite_create__P32030_mk(s);
-    s.tmp_0.arg0 = "Space Shooter - Clone";
+    s.tmp_0.arg0 = "Infinite Space Shooter";
     s.tmp_0.arg1 = 0;
     s.tmp_0.arg2 = 5;
     s.callLocIdx = 136; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.textSprite___32630 = (r0);
+    globals.textSprite___56188 = (r0);
     s.tmp_0 = Sprite_setPosition__P30072_mk(s);
-    s.tmp_0.arg0 = globals.textSprite___32630;
+    s.tmp_0.arg0 = globals.textSprite___56188;
     r0 = pxsim_ImageMethods.width(globals.screen___29685);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 / 2);
@@ -27997,9 +27997,9 @@ switch (step) {
     s.callLocIdx = 139; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    globals.textSprite2___32629 = (r0);
+    globals.textSprite2___56193 = (r0);
     s.tmp_0 = Sprite_setPosition__P30072_mk(s);
-    s.tmp_0.arg0 = globals.textSprite2___32629;
+    s.tmp_0.arg0 = globals.textSprite2___56193;
     r0 = pxsim_ImageMethods.width(globals.screen___29685);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 / 2);
@@ -28018,9 +28018,9 @@ switch (step) {
     s.callLocIdx = 143; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    globals.textSprite3___32628 = (r0);
+    globals.textSprite3___56198 = (r0);
     s.tmp_0 = Sprite_setPosition__P30072_mk(s);
-    s.tmp_0.arg0 = globals.textSprite3___32628;
+    s.tmp_0.arg0 = globals.textSprite3___56198;
     r0 = pxsim_ImageMethods.width(globals.screen___29685);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 / 2);
@@ -28061,12 +28061,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-InitCreditScreen__P32615.info = {"start":4822,"length":578,"line":138,"column":0,"endLine":147,"endColumn":1,"fileName":"main.ts","functionName":"InitCreditScreen","argumentNames":[]}
+InitCreditScreen__P56443.info = {"start":4822,"length":579,"line":138,"column":0,"endLine":147,"endColumn":1,"fileName":"main.ts","functionName":"InitCreditScreen","argumentNames":[]}
 
-function InitCreditScreen__P32615_mk(s) {
+function InitCreditScreen__P56443_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: InitCreditScreen__P32615, depth: s.depth + 1,
+        parent: s, fn: InitCreditScreen__P56443, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -70228,7 +70228,7 @@ const sprites_BaseSpriteSayRenderer__C29921_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["transparency16___32641","Asteroid___32601","hasPlayer___32638","maxShots___32632","dart___32618","playerSquare___32639","AlienCount___32634","FPS___32637","BogeySquare___32631","EnemyVel___32633","textSprite___32630","textSprite2___32629","textSprite3___32628","AlienGenCount___32636","Level___32635"])
+const breakpoints = setupDebugger(1, ["transparency16___32641","Asteroid___56088","hasPlayer___56133","maxShots___56151","dart___56543","playerSquare___56115","AlienCount___56145","FPS___56136","BogeySquare___56162","EnemyVel___56148","textSprite___56188","textSprite2___56193","textSprite3___56198","AlienGenCount___56139","Level___56142"])
 
-return _main___P54629
+return _main___P57300
 })
