@@ -137,7 +137,7 @@ function FireAlienLasers (amount: number) {
     }
 }
 function InitCreditScreen () {
-    textSprite = textsprite.create("Space Shooter - Clone", 0, 5)
+    textSprite = textsprite.create("Infinite Space Shooter", 0, 5)
     textSprite.setPosition(scene.screenWidth() / 2, 16)
     textSprite2 = textsprite.create("Press any button to start", 0, 5)
     textSprite2.setPosition(scene.screenWidth() / 2, scene.screenHeight() / 2)
